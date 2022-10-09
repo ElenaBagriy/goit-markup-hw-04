@@ -176,7 +176,9 @@ img {
     url(../images/hero.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 1600px;
+  background-size: cover;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 .hero-title {
   margin: 0 auto 30px;
@@ -279,7 +281,7 @@ img {
 }
 
 .team-role {
-  padding-bottom: 16px;
+  margin-bottom: 16px;
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
@@ -291,12 +293,18 @@ img {
   column-gap: 10px;
 }
 .icon-social-link {
-  display: block;
   fill: currentColor;
 }
+.social-item {
+  height: 44px;
+  width: 44px;
+}
 .social-link {
-  display: block;
-  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   color: #afb1b8;
 }
@@ -313,13 +321,18 @@ img {
   display: flex;
   column-gap: 30px;
 }
-
-.client-link {
-  display: block;
-  padding: 16px 32px;
+.clients-item {
   width: 170px;
   height: 92px;
+}
+.client-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
   border: 1px solid #afb1b8;
+  border-radius: 4px;
   color: #afb1b8;
 }
 .client-link:hover,
@@ -335,6 +348,7 @@ img {
 /* ==========FOOTER=========== */
 .footer-container {
   display: flex;
+  align-items: baseline;
 }
 .link {
   text-decoration: none;
@@ -385,11 +399,14 @@ img {
 }
 .right-footer {
   margin-left: 70px;
-  padding-top: 12px;
 }
+
 .footer-social-link {
-  display: block;
-  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   color: #ffffff;
   background-color: rgba(255, 255, 255, 0.1);
@@ -458,7 +475,13 @@ img {
     0px 3px 1px rgba(0, 0, 0, 0.1);
   color: #ffffff;
 }
-.portfolio-item:hover {
+.portfolio-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.portfolio-link:hover,
+.portfolio-link:focus {
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
     0px 1px 1px rgba(0, 0, 0, 0.12);
 }
